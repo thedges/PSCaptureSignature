@@ -1,0 +1,5 @@
+<design:component>
+	<design:attribute name="recordId" label="Record ID" />
+    <design:attribute name="width" label="Width of signature pad" />
+    <design:attribute name="height" label="Height of signature pad" />
+</design:component>

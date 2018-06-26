@@ -1,0 +1,24 @@
+<aura:component controller="PSCaptureSignatureController" implements="lightning:availableForFlowScreens,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <ltng:require scripts="{!$Resource.PSSignaturePad232 + '/signature_pad.min.js'}" 
+                  	afterScriptsLoaded="{!c.doInit}"/>
+    
+    <aura:attribute name="recordId" type="String" access="global"/>
+    <aura:attribute name="width" type="String" default="500" access="global"/>
+    <aura:attribute name="height" type="String"  default="200" access="global"/>
+    <aura:attribute name="signaturePad" type="Object"/>
+    <aura:attribute name="message" type="String"/>
+    
+    <div class="wrapper" id="signature-wrapper">
+        <div>
+          <span id="sig">Signature:</span>
+        </div>
+        <div>
+          <canvas id="signature-pad" class="signature-pad" width="{!v.width}" height="{!v.height}"></canvas>
+        </div>
+    </div>
+    <div class="buttons">
+	    <button class="slds-button slds-button--brand" id="save" onclick="{!c.saveSig}">Save</button>
+        <button class="slds-button slds-button--brand" id="save" onclick="{!c.clearSig}">Clear</button>
+        <span class="slds-p-top_x-small slds-p-left_x-small" style="font-weight: bold;">{!v.message}</span>
+    </div>
+</aura:component>
