@@ -9,6 +9,10 @@
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
+        <members>Capture_Signature_Sample</members>
+        <name>FlowDefinition</name>
+    </types>
+    <types>
         <members>PSSignaturePad232</members>
         <name>StaticResource</name>
     </types>
