@@ -1,4 +1,6 @@
 # PSCaptureSignature
+THIS SOFTWARE IS COVERED BY [THIS DISCLAIMER](https://raw.githubusercontent.com/thedges/Disclaimer/master/disclaimer.txt).
+
 Simple component to capture signature in a Flow. Original use case was to use in flow within Salesforce mobile. The component will create image file of signature and store on the configured recordId passed to the component.
 
 Steps to use component:
