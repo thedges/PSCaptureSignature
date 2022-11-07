@@ -29,7 +29,17 @@
             if (state === 'SUCCESS'){
                cmp.set('v.message', 'Signature saved!');
             } else {
-                cmp.set('v.message', 'Error:' + a.getError());
+                var errors = a.getError();
+                if (errors) {
+                    if (errors[0] && errors[0].message) {
+                        console.log("Error message: " + 
+                                 errors[0].message);
+                        cmp.set('v.message', 'Error:' + errors[0].message);
+                    }
+                } else {
+                    console.log("Unknown error");
+                    cmp.set('v.message', 'Unknown error');
+                }
             }
             $A.get("e.force:closeQuickAction").fire();
         });

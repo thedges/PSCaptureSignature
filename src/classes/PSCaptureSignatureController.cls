@@ -1,7 +1,6 @@
-public class PSCaptureSignatureController {
+public without sharing class PSCaptureSignatureController {
     @AuraEnabled 
     public static void uploadSignature(String parentId, Blob content) {
-        
         System.debug('Body: ' + content.toString());        
         String myString = content.toString();
         
@@ -18,6 +17,5 @@ public class PSCaptureSignatureController {
         cdl.LinkedEntityId = parentId;
         cdl.ShareType = 'V';
         insert cdl;
-        
     }
 }
