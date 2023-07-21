@@ -12,6 +12,7 @@ Steps to use component:
      - RecordID = {!recordId}
      - Height of signature = <integer value>
      - Width of signature = <integer value>   note: this value is not used as signature window will fill horizontal space
+     - Filename = name of file to store in attached files to the record
 
 <img src="https://github.com/thedges/PSCaptureSignature/blob/master/PSCaptureSignature.gif" width="350" height="500"></img>
 
