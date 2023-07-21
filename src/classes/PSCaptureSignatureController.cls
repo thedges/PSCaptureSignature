@@ -1,14 +1,14 @@
 public without sharing class PSCaptureSignatureController {
     @AuraEnabled 
-    public static void uploadSignature(String parentId, Blob content) {
+    public static void uploadSignature(String parentId, Blob content, String fileName) {
         System.debug('Body: ' + content.toString());        
         String myString = content.toString();
         
         ContentVersion cv = new ContentVersion();
         cv.ContentLocation = 'S';
         cv.VersionData = EncodingUtil.base64Decode(myString);
-        cv.Title = 'Signature';
-        cv.PathOnClient = 'Signature.png';
+        cv.Title = fileName;
+        cv.PathOnClient = fileName + '.png';
         
         insert cv;
         

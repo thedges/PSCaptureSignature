@@ -22,7 +22,8 @@
         var action = cmp.get("c.uploadSignature");
         action.setParams({
             "parentId": cmp.get("v.recordId"),
-            "content": test
+            "content": test,
+            "fileName": cmp.get("v.fileName")
         });
         action.setCallback(this, function(a) {
             var state = a.getState();

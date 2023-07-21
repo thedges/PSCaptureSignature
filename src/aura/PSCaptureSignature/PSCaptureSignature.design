@@ -2,4 +2,5 @@
 	<design:attribute name="recordId" label="Record ID" />
     <design:attribute name="width" label="Width of signature pad" />
     <design:attribute name="height" label="Height of signature pad" />
+    <design:attribute name="fileName" label="Name of signature file to create" />
 </design:component>

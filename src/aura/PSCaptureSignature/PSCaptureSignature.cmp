@@ -5,6 +5,7 @@
     <aura:attribute name="recordId" type="String" access="global"/>
     <aura:attribute name="width" type="String" default="500" access="global"/>
     <aura:attribute name="height" type="String"  default="200" access="global"/>
+    <aura:attribute name="fileName" type="String" default="Signature" access="global"/>
     <aura:attribute name="signaturePad" type="Object"/>
     <aura:attribute name="message" type="String"/>
     
